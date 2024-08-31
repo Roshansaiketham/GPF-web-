@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #004e92, #00b09b, #00d4ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.logo-card {
+  background: linear-gradient(135deg, lightgreen, silver);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  transform: scale(0.8);
+  animation: bringForward 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: scale(0.85);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.logo-text {
+  font-size: 24px;
+  background: linear-gradient(to right, rgb(45, 80, 161), rgb(10, 203, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes bringForward {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
